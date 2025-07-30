@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Ani ❤</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }html,
+body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('Gambar WhatsApp 2025-07-27 pukul 18.50.09_2517f501.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  overflow-x: hidden;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+h1 {
+  font-size: 28px;
+  text-align: center;
+}
+
+#pesan {
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 16px;
+  border-radius: 12px;
+  max-width: 90%;
+  margin: 10px 0;
+}
+
+button {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px 20px;
+  background-color: #ff69b4;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+.bunga,
+.love {
+  display: none; /* nonaktifkan animasi */
+}
+
+#mulaiMusikBtn {
+  display: none;
+}
+
+  </style>
+</head><body>
+  <audio id="musik" autoplay muted playsinline></audio>
+  <div class="overlay">
+    <h1>Untuk Kamu, Ani 💕</h1>
+    <button onclick="tampilkanSemuaPesan(pesanManis)">💌 Baca Pesan Manis</button>
+    <button onclick="tampilkanSemuaPesan(kataTerakhir)">❤ Ada Cerpen</button>
+    <button onclick="tampilkanSemuaPesan(pesanRahasia)">🌠 Pesan tambahan</button>
+    <button onclick="tampilkanSemuaPesan(pesancerpen)">💌 PUISI</button>
+    <div id="pesan">Enggak ada kata yang bisa gambarin seberapa berharganya kamu buatku.</div>
+    <button id="mulaiMusikBtn" onclick="paksaMulaiMusik()">Putar Musik 🎵</button>
+  </div>
+
+  <script>
+    const pesanManis = [
+      `Ani, kamu itu anugerah yang datang tanpa diminta. Cara kamu menatap, bicara, tertawa — semua itu selalu berhasil bikin hari jadi lebih hangat.
+      Kalau suatu hari kamu merasa sendiri, atau ngerasa gak cukup baik, ingat ini ya: kamu dicintai lebih dari yang kamu tahu. Dan kamu pantas dapetin semua hal indah di dunia ini.
+      Kamu itu kuat. Meski sering nggak kelihatan, aku tahu kamu berjuang di balik diam dan senyummu. Dan aku selalu di sini, bangga sama kamu.
+      Kadang aku cuma pengen bilang makasih. Karena udah jadi kamu, yang sederhana tapi selalu punya tempat paling istimewa di hati ini. 💌
+      Enggak ada pelangi tanpa hujan, enggak ada cinta tanpa rasa. Kamu adalah cerita yang indah — yang selalu ingin aku baca berulang kali.`
+    ];
+
+    const kataTerakhir = [
+      `Bagus bukan tipe cowok yang gampang ngobrol sama cewek. Tapi sejak pertama kali lihat Ani jaga konter kecil dekat gang rumahnya, dia merasa… beda.
+
+Tiap lewat, Bagus Beli voucher di konter itu, ingin minta nomernya.
+
+Tapi dia gak kuat nunggu lama.
+
+Bagus akhirnya minta nomor Ani ke temannya yang kenal sama keluarga Ani.
+
+Malamnya, dia kirim pesan:
+
+> “Hai, Ani… aku Bagus, temennya Rft. Maaf ya tiba-tiba chat. Cuma pengin kenalan… kalau boleh.”
+
+
+
+Lama nggak dibalas. Bagus hampir hapus pesannya. Tapi lima menit kemudian:
+
+> “Oalah, ini yang sering lewat depan konter tapi pura-pura beli Kouta mulu ya? 😄”
+
+
+
+Bagus senyum sendiri. Chat itu jadi awal obrolan mereka.
+
+Setiap malam mereka ngobrol. Ani cerita soal pelanggan aneh, soal sepinya konter, dan kadang curhat soal rindu sama ibunya.
+
+Bagus pun mulai berani bercanda, meski tetap salting tiap Ani bales cepat.
+
+Tapi pagi itu.
+
+Lalu WA dari Ani masuk:
+
+> “Bagus, maaf ya… aku pamit yaa pulang ke kampung. Sama Kakakku. Kita gak bisa jaga konter lagi.”
+
+
+
+Bagus membalas:
+
+> “Oh… makasih udah mau ngobrol selama ini. Jaga diri ya, Ani.”
+
+
+
+Ani membalas satu kalimat terakhir:
+
+> “Kamu juga, bagus. Terima kasih ya... yang bikin aku senyum, cuma lewat chat.”
+
+
+
+Setelah itu, tak ada lagi pesan masuk.
+
+Konter itu tetap buka. Tapi tiap bagus lewat, dia masih senyum kecil.
+
+Karena kadang…
+perasaan itu lahir dari hal sederhana.
+Dan perpisahan pun… bisa terasa besar, meski hanya lewat layar.`
+    ];
+
+    const pesanRahasia = [
+      `Hai Ani 🌸,
+
+Aku cuma mau kamu tahu bahwa setiap kali aku mikirin kamu, ada rasa hangat yang tumbuh dalam hati. Kamu mungkin gak sadar, tapi caramu tersenyum, caramu sabar menghadapi hari-hari berat, itu bikin aku kagum banget.
+
+Kadang dunia ini bising dan capek, tapi kehadiranmu kayak jeda yang tenang. Kamu itu rumah — tempat segala resah jadi reda. Dan aku bersyukur bisa kenal kamu, bisa lihat sisi lembut dan kuatmu sekaligus.
+
+Enggak semua orang bisa jadi cahaya di tengah gelap, tapi kamu bisa — bahkan saat kamu sendiri sedang butuh cahaya. Dan untuk itu, aku pengen bilang: kamu luar biasa. Jangan pernah ragukan itu.
+
+Jangan lupa jaga dirimu, ya. Makan cukup, tidur cukup, dan beri ruang buat dirimu sendiri tumbuh, salah, dan belajar.
+
+Aku di sini, bukan untuk jadi penyelamat, tapi teman yang setia berjalan bareng, tanpa maksa tahu semuanya — cukup ada, dan selalu mendoakan yang terbaik buatmu.
+
+💕`
+    ];
+
+    const pesancerpen = [
+      `Di balik sunyi senja yang tak bersuara,
+ada nama yang selalu terucap dalam doa: Ani.
+Bukan sekadar tiga huruf biasa,
+tapi irama indah yang menenangkan jiwa.
+
+Ani, kau seperti kalimat yang tak ingin kutamatkan,
+selalu ingin kubaca berulang tanpa titik penghabisan.
+Tatapmu lembut seperti bait puisi,
+membuat hari yang gelisah terasa damai kembali.
+
+Jika aku adalah pena,
+maka kau adalah kertas yang kupilih untuk menulis rasa.
+Dan jika hidup ini sebuah cerita,
+maka namamu akan kuletakkan di setiap paragraf cinta.`
+    ];
+
+    const audio = document.getElementById("musik");
+    const laguList = ["mangu.mp3", "tentangaku.mp3", "takkan.mp3"];
+    let laguSekarang = 0;
+
+    audio.src = laguList[laguSekarang];
+    audio.addEventListener("ended", () => {
+      laguSekarang = (laguSekarang + 1) % laguList.length;
+      audio.src = laguList[laguSekarang];
+      audio.play();
+    });
+
+    function tampilkanSemuaPesan(pesanArray) {
+      const elemen = document.getElementById("pesan");
+      elemen.innerText = "";
+      let indexPesan = 0;
+
+      function ketikParagraf(teks) {
+        let i = 0;
+        let hasil = "";
+
+        function ketikHuruf() {
+          if (i < teks.length) {
+            hasil += teks[i];
+            elemen.innerText = hasil;
+            i++;
+            setTimeout(ketikHuruf, 45);
+          } else {
+            elemen.innerText += "\n\n";
+            indexPesan++;
+            if (indexPesan < pesanArray.length) {
+              setTimeout(() => ketikParagraf(pesanArray[indexPesan]), 3000);
+            }
+          }
+        }
+
+        ketikHuruf();
+      }
+
+      ketikParagraf(pesanArray[indexPesan]);
+    }
+
+    function tampilkanPesanManis() {
+      ketikBeberapaParagraf(pesanManis);
+    }
+
+    function tampilkanKataTerakhir() {
+      ketikBeberapaParagraf(kataTerakhir);
+    }
+
+    function tampilkanPesanRahasia() {
+      ketikBeberapaParagraf(pesanRahasia);
+    }
+
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        audio.muted = false;
+        audio.play().catch(() => {
+          document.getElementById("mulaiMusikBtn").style.display = "inline-block";
+        });
+      }, 500);
+    });
+
+    function paksaMulaiMusik() {
+      audio.muted = false;
+      audio.play();
+      document.getElementById("mulaiMusikBtn").style.display = "none";
+    }
+
+    for (let i = 0; i < 20; i++) {
+      const bunga = document.createElement("div");
+      bunga.classList.add("bunga");
+      bunga.style.left = Math.random() * window.innerWidth + "px";
+      bunga.style.animationDuration = (4 + Math.random() * 4) + "s";
+      document.body.appendChild(bunga);
+    }
+
+    function buatLove() {
+      const love = document.createElement('div');
+      love.classList.add('love');
+      love.textContent = '❤';
+      love.style.left = Math.random() * window.innerWidth + 'px';
+      love.style.animationDuration = (3 + Math.random() * 2) + 's';
+      love.style.fontSize = (20 + Math.random() * 20) + 'px';
+      document.body.appendChild(love);
+      setTimeout(() => love.remove(), 5000);
+    }
+
+    setInterval(buatLove, 600);
+  </script>
+</body>
+
+</html>
